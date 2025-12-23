@@ -31,9 +31,9 @@ public class CncMachineData
     public string machine_id;
     public string model;
     public Axes axes;
-    public object spindle; // Можно расширить, если нужно
-    public object tool_changer; // Можно расширить, если нужно
-    public object workpiece_zero; // Можно расширить, если нужно
+    public object spindle;
+    public object tool_changer;
+    public object workpiece_zero;
     public string timestamp;
     public string status;
 }
@@ -177,7 +177,7 @@ public class JSONDataFetcher : MonoBehaviour
     public float GetFloatValue(string key, float defaultValue = 0f)
     {
         string stringValue = GetValue(key);
-        if (stringValue != null && float.TryParse(stringValue, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float result))
+        if (stringValue != null && float.TryParse(stringValue, out float result))
         {
             return result;
         }

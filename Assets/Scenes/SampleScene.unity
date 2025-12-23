@@ -128,6 +128,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3d2d1c22ad884724ebd63defe7f37af0, type: 3}
   m_PrefabInstance: {fileID: 1975388982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &429130042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429130044}
+  - component: {fileID: 429130043}
+  m_Layer: 0
+  m_Name: DataFetcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &429130043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429130042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e604cd683a28834184e123648ef45b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiUrl: http://localhost:3000/cnc
+  autoFetchOnStart: 1
+  refreshInterval: 1
+--- !u!4 &429130044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429130042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.9899344, y: 5.0171504, z: -7.9747143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &468693703 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4497425440376518846, guid: 338cc433e5f81924cba207a58533f287, type: 3}
@@ -855,7 +902,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8320264167621477055, guid: 902b766c3d9eaaa4a8099819001a002f, type: 3}
   m_PrefabInstance: {fileID: 1111124545414074200}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1645635649
+--- !u!114 &1645635651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -864,12 +911,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1645635647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e604cd683a28834184e123648ef45b1, type: 3}
+  m_Script: {fileID: 11500000, guid: befc0603fb0ce304d806fb88ba02e8e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiUrl: https://karasevv.com/test/mt_data.json
-  autoFetchOnStart: 1
-  refreshInterval: 1
+  dataFetch: {fileID: 429130043}
 --- !u!1001 &1868030456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1324,12 +1369,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3020822663536948300, guid: 902b766c3d9eaaa4a8099819001a002f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6160538
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020822663536948300, guid: 902b766c3d9eaaa4a8099819001a002f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3020822663536948300, guid: 902b766c3d9eaaa4a8099819001a002f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6
+      value: -28.28
       objectReference: {fileID: 0}
     - target: {fileID: 3402299933484060664, guid: 902b766c3d9eaaa4a8099819001a002f, type: 3}
       propertyPath: m_Name
